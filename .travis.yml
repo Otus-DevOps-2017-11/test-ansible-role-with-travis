@@ -9,7 +9,6 @@ env:
   global:
   - secure: 042a071ee7fe58c663acd32c7c5b7c1ee852d8c5
   - secure: d2af1bb7094e9aaa4a4ad96e7b17d682e8cbc1c7
-	 
 script:
 - molecule create
 - molecule converge
