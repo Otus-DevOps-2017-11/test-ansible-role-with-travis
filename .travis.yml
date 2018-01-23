@@ -1,4 +1,4 @@
-language: python
+Language: python
 python:
 - '3.6'
 install:
@@ -21,4 +21,3 @@ before_install:
 - tar xvf secrets.tar
 - mv google_compute_engine /home/travis/.ssh/
 - chmod 0600 /home/travis/.ssh/google_compute_engine
->>>>>>> 050f55dc9c9f5c2584d14399633026d8bafc62ca
