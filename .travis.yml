@@ -15,7 +15,7 @@ env:
 script:
 - molecule  create
 - molecule converge
-- molecule verify
+- molecule --debug verify
 after_script:
 - molecule destroy
 before_install:
