@@ -2,6 +2,6 @@
 
 ---
 converged: false
-created: false
+created: true
 driver: gce
 prepared: null
