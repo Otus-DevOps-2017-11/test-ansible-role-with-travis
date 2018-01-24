@@ -2,4 +2,4 @@
 - name: Converge
   hosts: all
   roles:
-    - role: db_infra
+   - role: db_infra
