@@ -2,7 +2,7 @@ Language: python
 python:
 - '3.6'
 install:
-- pip install --user ansible==2.3.0 molecule apache-libcloud 'saga-python[libcloud]'
+- pip install --user ansible==2.3.0 molecule apache-libcloud backports.ssl_match_hostname
 env:
   matrix:
   - GCE_CREDENTIALS_FILE="$(pwd)/credentials.json"
