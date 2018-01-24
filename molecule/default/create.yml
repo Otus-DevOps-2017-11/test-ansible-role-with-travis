@@ -1,6 +1,6 @@
 ---
 - name: Create
-  hosts: localhost
+  hosts: localhost 
   connection: local
   gather_facts: false
   no_log: "{{ not lookup('env', 'MOLECULE_DEBUG') | bool }}"
@@ -20,8 +20,13 @@
         machine_type: "{{ item.machine_type }}"
         image: "{{ item.image }}"
         service_account_email: "{{ '118173084760-compute@developer.gserviceaccount.com' }}"
+<<<<<<< HEAD
         credentials_file: "{{ '~/db_infra/credentials.json' }}"
         project_id: "{{  'clever-overview-188908' }}"
+=======
+        credentials_file: "{{ lookup('env', 'GCE_CREDENTIALS_FILE') }}"
+        project_id: "{{ 'clever-overview-188908' }}"
+>>>>>>> 9b7bd0a5d930df1c3d3290368eeae9c820d34edd
       register: server
       with_items: "{{ molecule_yml.platforms }}"
       async: 7200

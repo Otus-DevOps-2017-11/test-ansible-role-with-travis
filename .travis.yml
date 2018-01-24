@@ -2,7 +2,7 @@ Language: python
 python:
 - '3.6'
 install:
-- pip install --user ansible==2.3.0 molecule apache-libcloud
+- pip install --user ansible==2.3.0 molecule apache-libcloud==0.20.1 backports.ssl_match_hostname
 env:
   matrix:
   - GCE_CREDENTIALS_FILE="$(pwd)/credentials.json"
@@ -13,7 +13,7 @@ env:
   - secure: QIUJL4fzU0TVEKInJl1JeluLXaTsi+5nqEootxU9z6b9dpVmMZqCrSqTU5NGRCJ35L9U3Y6DVFdPRZmb5OaQG+wvO/yEh1ypOcdo6O/D8ZCvLXD+/BITiUS95FbTcIQKi2k9tRM0faaZ7EqKhAC5Kk72tSz0I9qYX1g1M/lx2KCzHs6x3kjiZihixoYI3+ZqQzZzCrTGXsCfJtMXZnYUDRW7l15bmx5WflscFPQzANurI+0DEGhcyCudyi4E2CYWFfBoV8nhmWZYBLaIhkXO4zFWiwdT2pnV0OMOvsDPk0NWG84XMX9LsL+GkU0QZ/HUa4H0sWQkMcuBCMRUw1EZ4wEzkRcPCZ4qppq1x7fvSkInShY8xfk+i4BEiK+ptVWo8s8GtWBplkJjBzZlfdp+usbuai0uk4brSazHRbNYpn44BMcoEV4bntrQpkIpwUqMmj9kn6nCfLtQE0EXDHOOuyibHMkamEd4rydxMqnsdh7J+I9y5OXkt+1FiZnLFRdRoTU51qijWgEgyARzyBjE0kM1/WY6YWKl8zQNc8aq4Pg4tOTRLIpEDH1Xa3OVvF0ttuhyQWITCb7P9bBIgUy/h+DeE/OGcyK0k72mX0raXRnxwHb9LonSBVFe7mVzYGYuzyHVSJ5C+42VQsnFodPCdILJ3M0cVGrmR5ozRU8GwiY=
   - secure: lugCGAZgFbbeUJhvGQUCwYsPs1vvdQD6vP22qjVsrF97v8H+Kbc0+CTXgq7qEvoH7jouzkpeskeuoWgeU/FtuzWBXjM3dzIgLuq5o+kYvYK//g2rhRCUrjWUOUCi3bzf2fMnM15HGfUsy/BbgWzajaZzUVxc2pcoMn8+EbzIEnNtEbJJFhdoe8npx5wldQar3FsIhkTOkOc6TyqoZeaJu8tk1BD9Gz6+0mySRQtb6DKswTGvfCqDpyPzkKAQPhWZFolu5pR35DZ8/mc7h9QWSy94w2F6PSM/1rEb7Mp+vdtREC20ewijn4JVzckZMQ5a5FDzSUS8qxpEUfXS1ekRozG4SktlxLeCwwtklID8ql+OEQ+TI/IcUnaB5UywTE+iZT5WeYJGFAMertVvoDEXpE+7umOQawoEPP0Dw3AeEYtFuo/LkManrjWb2lziYi6S8w/2e5XsL1f3DIYvprKhkU4ZmbsRgfDtrRDQIKp9YB+rcerP7wAHwc510F9rsJzyUapOb0AtX33TBCNmoynKzL8q6i3vuTLM0TQ8thAdHG7Le9IFKBu5E+hog0ZLymLVvt1mkHUimJMcPYqWClsh7iaLtWoyihM6Aal3G40LrnN7T8oPXJ7fADjV+kkeUCdgq2T2ZyYLLDj4+au2znq2AbQPeEd/MzLjCM6WfOPSbA8=
 script:
-- molecule create
+- molecule  create
 - molecule converge
 - molecule verify
 after_script:

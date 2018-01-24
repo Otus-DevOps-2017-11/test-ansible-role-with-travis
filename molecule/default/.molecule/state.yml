@@ -1,7 +1,0 @@
-# Molecule managed
-
----
-converged: false
-created: true
-driver: gce
-prepared: null
