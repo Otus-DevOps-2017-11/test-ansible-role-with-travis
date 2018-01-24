@@ -1,7 +1,7 @@
 ---
 - name: Create
-  hosts: 35.195.202.48 
-  connection: ssh
+  hosts: localhost 
+  connection: local
   gather_facts: false
   no_log: "{{ not lookup('env', 'MOLECULE_DEBUG') | bool }}"
   vars:
