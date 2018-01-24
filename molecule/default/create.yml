@@ -19,9 +19,9 @@
         zone: "{{ item.zone }}"
         machine_type: "{{ item.machine_type }}"
         image: "{{ item.image }}"
-        service_account_email: "{{'118173084760-compute@developer.gserviceaccount.com' }}"
+        service_account_email: "{{ lookup('env', 'GCE_SERVICE_ACCOUNT_EMAIL') }}"
         credentials_file: "{{ lookup('env', 'GCE_CREDENTIALS_FILE') }}"
-        project_id: "{{ 'clever-overview-188908' }}"
+        project_id: "{{ lookup('env', 'GCE_PROJECT_ID') }}"
       register: server
       with_items: "{{ molecule_yml.platforms }}"
       async: 7200
