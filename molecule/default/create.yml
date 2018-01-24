@@ -20,7 +20,7 @@
         machine_type: "{{ item.machine_type }}"
         image: "{{ item.image }}"
         service_account_email: "{{'118173084760-compute@developer.gserviceaccount.com' }}"
-        credentials_file: "{{ '~/test-ansible-role-with-travis/credentials.json' }}"
+        credentials_file: "{{ '/home/travis/.ssh/credentials.json' }}"
         project_id: "{{ 'clever-overview-188908' }}"
       register: server
       with_items: "{{ molecule_yml.platforms }}"
