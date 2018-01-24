@@ -2,7 +2,7 @@ Language: python
 python:
 - '3.6'
 install:
-- pip install --user ansible==2.3.0 molecule apache-libcloud==0.20.1 backports.ssl_match_hostname testinfra==1.10.1 pytest==3.3.2
+- pip install --user ansible==2.3.0 molecule apache-libcloud==0.20.1 backports.ssl_match_hostname testinfra==1.5.2 pytest==3.3.2
 env:
   matrix:
   - GCE_CREDENTIALS_FILE="$(pwd)/credentials.json"
