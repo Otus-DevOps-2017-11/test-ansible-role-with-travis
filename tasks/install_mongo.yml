@@ -16,7 +16,7 @@
     state: present
   tags: install
   
- - name: Install dbus package
+- name: Install dbus package
    apt:
      name: dbus
      state: present
