@@ -15,6 +15,12 @@
     name: mongodb-org
     state: present
   tags: install
+  
+ - name: Install dbus package
+   apt:
+     name: dbus
+     state: present
+   tags: install
 
 - name: Configure service supervisor
   systemd:
