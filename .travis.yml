@@ -16,9 +16,9 @@ env:
 script:
 - molecule  create
 - molecule converge
-- molecule  verify
+#- molecule  verify
 after_script:
-- molecule destroy
+#- molecule destroy
 before_install:
 - openssl aes-256-cbc -K $encrypted_8d879a3c5c12_key -iv $encrypted_8d879a3c5c12_iv
   -in secrets.tar.enc -out secrets.tar -d
